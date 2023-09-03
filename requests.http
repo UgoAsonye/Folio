@@ -13,7 +13,7 @@ Content-Type: application/json
 }
 
 ###Users Show
-GET http://localhost:3000/users/5.json
+GET http://localhost:3000/users/3.json
 Content-Type: application/json
 
 ###Users Update
@@ -34,3 +34,18 @@ Content-Type: application/json
 
 ###Uploads index
 GET http://localhost:3000/uploads.json
+
+###Uploads Create
+POST http://localhost:3000/uploads.json
+Content-Type: application/json
+
+{
+  "title": "New Grill",
+  "description": "I figured I would take my new grill for a test drive",
+  "image": "https://www.bowrivermeatmarket.ca/wp-content/uploads/2021/03/order-meat-online-1-1024x683.jpg",
+  "user_id": 3
+}
+
+###Uploads Show
+GET http://localhost:3000/uploads/2.json
+Content-Type: application/json
