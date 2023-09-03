@@ -12,4 +12,9 @@ class CommentsController < ApplicationController
     )
     render :show
   end
+
+  def show
+    @comment = Comment.find_by(id: params[:id])
+    render :show
+  end
 end

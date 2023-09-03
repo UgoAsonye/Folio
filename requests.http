@@ -81,3 +81,7 @@ Content-Type: application/json
  "upload_id": 1,
  "comment": "Wow! That looks delciious!" 
 }
+
+###Comments Show
+GET http://localhost:3000/comments/2.json
+Content-Type: application/json
