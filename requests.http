@@ -31,6 +31,7 @@ Content-Type: application/json
 DELETE http://localhost:3000/users/5.json
 Content-Type: application/json
 
+############################################
 
 ###Uploads index
 GET http://localhost:3000/uploads.json
@@ -63,4 +64,10 @@ Content-Type: application/json
 
 ###Uploads Destroy
 DELETE http://localhost:3000/uploads/3.json
+Content-Type: application/json
+
+############################################
+
+###Comments Index
+GET http://localhost:3000/comments.json
 Content-Type: application/json

@@ -17,4 +17,11 @@ Rails.application.routes.draw do
   get "/uploads/:id" => "uploads#show"
   patch "/uploads/:id" => "uploads#update"
   delete "/uploads/:id" => "uploads#destroy"
+
+  #Comments controller routes
+  get "/comments" => "comments#index"
+  post "/comments" => "comments#create"
+  get "/comments/:id" => "comments#show"
+  patch "/comments/:id" => "comments#update"
+  delete "/comments/:id" => "comments#destroy"
 end
