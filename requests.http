@@ -71,3 +71,13 @@ Content-Type: application/json
 ###Comments Index
 GET http://localhost:3000/comments.json
 Content-Type: application/json
+
+###Comments Create
+POST http://localhost:3000/comments.json
+Content-Type: application/json
+
+{
+ "user_id": 2,
+ "upload_id": 1,
+ "comment": "Wow! That looks delciious!" 
+}
