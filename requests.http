@@ -1,2 +1,13 @@
 ### Users Index
 GET http://localhost:3000/users.json
+
+### Users Create
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "username": "SoulReaper",
+  "email": "ichigo@test.com",
+  "password": "password",
+  "profile_pic": "https://images4.fanpop.com/image/photos/15900000/Ichigo-kurosaki-ichigo-15958160-750-1000.jpg"
+}
