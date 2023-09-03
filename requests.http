@@ -6,14 +6,14 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "username": "SoulReaper",
-  "email": "ichigo@test.com",
+  "username": "Dummy",
+  "email": "dummy@test.com",
   "password": "password",
-  "profile_pic": "https://images4.fanpop.com/image/photos/15900000/Ichigo-kurosaki-ichigo-15958160-750-1000.jpg"
+  "profile_pic": "Dummy.jpg"
 }
 
 ###Users Show
-GET http://localhost:3000/users/3.json
+GET http://localhost:3000/users/5.json
 Content-Type: application/json
 
 ###Users Update
@@ -26,3 +26,7 @@ Content-Type: application/json
   "password": "password",
   "profile_pic": "https://images.freeimages.com/images/large-previews/b29/normal-guy-1438830.jpg"
 }
+
+###Users Destroy
+DELETE http://localhost:3000/users/5.json
+Content-Type: application/json
