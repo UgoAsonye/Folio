@@ -30,3 +30,7 @@ Content-Type: application/json
 ###Users Destroy
 DELETE http://localhost:3000/users/5.json
 Content-Type: application/json
+
+
+###Uploads index
+GET http://localhost:3000/uploads.json
