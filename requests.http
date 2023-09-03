@@ -60,3 +60,7 @@ Content-Type: application/json
   "image": "https://www.bowrivermeatmarket.ca/wp-content/uploads/2021/03/order-meat-online-1-1024x683.jpg",
   "user_id": 3
 }
+
+###Uploads Destroy
+DELETE http://localhost:3000/uploads/3.json
+Content-Type: application/json

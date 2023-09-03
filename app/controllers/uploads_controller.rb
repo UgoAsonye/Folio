@@ -29,4 +29,10 @@ class UploadsController < ApplicationController
     )
     render :show
   end
+
+  def destroy
+    @upload = Upload.find_by(id: params[:id])
+    @upload.destroy
+    render json: { message: "Upload has been deleted." }
+  end
 end
