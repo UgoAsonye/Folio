@@ -95,3 +95,7 @@ Content-Type: application/json
  "upload_id": 1,
  "comment": "Wow, that looks delciious!" 
 }
+
+###Comments Destroy
+DELETE http://localhost:3000/comments/3.json
+Content-Type: application/json
