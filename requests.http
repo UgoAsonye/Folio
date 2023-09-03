@@ -85,3 +85,13 @@ Content-Type: application/json
 ###Comments Show
 GET http://localhost:3000/comments/2.json
 Content-Type: application/json
+
+###Comments Update
+PATCH http://localhost:3000/comments/2.json
+Content-Type: application/json
+
+{
+  "user_id": 2,
+ "upload_id": 1,
+ "comment": "Wow, that looks delciious!" 
+}
