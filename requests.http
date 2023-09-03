@@ -11,3 +11,7 @@ Content-Type: application/json
   "password": "password",
   "profile_pic": "https://images4.fanpop.com/image/photos/15900000/Ichigo-kurosaki-ichigo-15958160-750-1000.jpg"
 }
+
+###Users Show
+GET http://localhost:3000/users/1.json
+Content-Type: application/json
