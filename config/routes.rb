@@ -24,4 +24,7 @@ Rails.application.routes.draw do
   get "/comments/:id" => "comments#show"
   patch "/comments/:id" => "comments#update"
   delete "/comments/:id" => "comments#destroy"
+
+  #Sessions controller route
+  post "/sessions" => "sessions#create"
 end

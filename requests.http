@@ -34,6 +34,15 @@ Content-Type: application/json
 DELETE http://localhost:3000/users/5.json
 Content-Type: application/json
 
+
+###Users Login
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "luffy@test.com",
+  "password": "password"
+}
 ############################################
 
 ###Uploads index
