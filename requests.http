@@ -1,15 +1,16 @@
 ### Users Index
 GET http://localhost:3000/users.json
 
-### Users Create
+### Users Create Password and email blank for some reason
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
   "username": "Dummy",
   "email": "dummy@test.com",
+  "profile_pic": "Dummy.jpg",
   "password": "password",
-  "profile_pic": "Dummy.jpg"
+  "password_confirmation": "password"
 }
 
 ###Users Show
@@ -17,14 +18,16 @@ GET http://localhost:3000/users/3.json
 Content-Type: application/json
 
 ###Users Update
-PATCH http://localhost:3000/users/3.json
+PATCH http://localhost:3000/users/4.json
 Content-Type: application/json
 
 {
-  "username": "TheRealJoeSchmoe",
-  "email": "joe@test.com",
+  "username": "SubSoulReaper",
+  "email": "ichigo@test.com",
+  "profile_pic": "https://images4.fanpop.com/image/photos/15900000/Ichigo-kurosaki-ichigo-15958160-750-1000.jpg",
   "password": "password",
-  "profile_pic": "https://images.freeimages.com/images/large-previews/b29/normal-guy-1438830.jpg"
+  "password_confirmation": "password"
+
 }
 
 ###Users Destroy

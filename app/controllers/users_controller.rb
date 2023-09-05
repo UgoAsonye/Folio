@@ -8,10 +8,16 @@ class UsersController < ApplicationController
     @user = User.create(
       username: params[:username],
       email: params[:email],
-      password: params[:password],
       profile_pic: params[:profile_pic],
+      password: params[:password],
+      password_confirmation: params[:password_confirmation],
     )
-    render :show
+    if @user.save
+      render json: { message: "User created successfully" }, status: :created
+    else
+      render json: { errors: @user.errors.full_messages }, status: :bad_request
+    end
+    # render :show
   end
 
   def show
@@ -24,8 +30,9 @@ class UsersController < ApplicationController
     @user.update(
       username: params[:username] || @user.username,
       email: params[:email] || @user.email,
-      password: params[:password] || @user.password,
       profile_pic: params[:profile_pic] || @user.profile_pic,
+      password: params[:password] || @user.password,
+      password_confirmation: params[:password_confirmation] || @user.password_confirmation,
     )
     render :show
   end
