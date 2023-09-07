@@ -1,7 +1,7 @@
 ### Users Index
 GET http://localhost:3000/users.json
 
-### Users Create Password and email blank for some reason
+### Users Create 
 POST http://localhost:3000/users.json
 Content-Type: application/json
 

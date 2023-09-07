@@ -9,9 +9,13 @@ class UploadsController < ApplicationController
       title: params[:title],
       description: params[:description],
       image: params[:image],
-      user_id: params[:user_id],
+      user_id: 7, #hard coded until frontend authentication complete
     )
-    render :show
+    if @upload.valid?
+      render :show
+    else
+      render json: { error: @upload.errors.full_messages }, status: 422
+    end
   end
 
   def show
