@@ -5,11 +5,16 @@ class UploadsController < ApplicationController
   end
 
   def create
+    image_url = params[:image_url]
+    if params[:image_file]
+      response = Cloudinary::Uploader.upload(params["image_file"], resource_type: :auto)
+      image_url = response["secure_url"]
+    end
     @upload = Upload.create(
       title: params[:title],
       description: params[:description],
-      image: params[:image],
-      user_id: 7, #hard coded until frontend authentication complete
+      image: image_url,
+      user_id: params[:user_id],
     )
     if @upload.valid?
       render :show

@@ -6,11 +6,16 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.create(
-      user_id: params[:user_id],
+      user_id: current_user.id,
       upload_id: params[:upload_id],
       comment: params[:comment],
     )
-    render :show
+
+    if @comment.valid?
+      render :show
+    else
+      render json: { error: @comment.errors.full_messages }, status: 422
+    end
   end
 
   def show
