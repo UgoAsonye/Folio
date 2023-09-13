@@ -14,7 +14,7 @@ class UploadsController < ApplicationController
       title: params[:title],
       description: params[:description],
       image: image_url,
-      user_id: params[:user_id],
+      user_id: current_user.id,
     )
     if @upload.valid?
       render :show

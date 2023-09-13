@@ -6,3 +6,4 @@ json.title upload.title
 json.description upload.description
 json.image upload.image
 json.user_id upload.user_id
+json.comments upload.comments
